@@ -16,3 +16,13 @@ const clock = setInterval(function time() {
     minutes.textContent = min;
     seconds.textContent = sec;
 })
+
+var currentTime = new Date().getHours();
+if (document.body) {
+    if (7 <= currentTime && currentTime < 18) {
+        document.body.background = "/IMG/day.jpg";
+    }
+    else {
+        document.body.background = "/IMG/night.jpg";
+    }
+}
